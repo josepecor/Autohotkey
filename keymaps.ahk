@@ -10,9 +10,18 @@
    VarSetCapacity(Clip0, 0)      ; Free memory
 Return
 
+^+T::
+    Send ^c
+    Sleep 500
+    Run https://www.deepl.com/es/translator#en/es/%ClipBoard%
+Return
+
+^+P::
+    Run "C:\Proyectos\Autohotkey\Traducir.ahk"
+Return
+
 #IfWinActive ahk_class Notepad
-    ^s::Send ^g 
+    ^s::Send ^g
     ^f::Send ^b
 #IfWinActive
 Return
-	
